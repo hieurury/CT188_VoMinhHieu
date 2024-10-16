@@ -1,0 +1,122 @@
+body {
+}
+.home-container {
+    background: var(--primary-color);
+    padding: 12px 0px;
+    min-height: 400px;
+    padding-bottom: 150px;
+}
+.title {
+    font-size: 32px;
+    text-transform: uppercase;
+    color: var(--normal-color);
+    margin: 16px 0;
+    padding-left: 16px;
+}
+.list-item {
+    display: flex;
+}
+.list-item li {
+    list-style-type: none;
+    width: 25%;
+    padding: 8px;
+}
+.list-item li a {
+    font-size: 26px;
+    text-decoration: none;
+    color: var(--normal-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 30px;
+    border-radius: 4px;
+    transition: background .3s linear;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.list-item li a:hover {
+    background: var(--normal-color);
+    color: var(--primary-color);
+}
+.item-des {
+    font-size: 16px;
+}
+
+/* *phần sản phẩm */
+.title-primary {
+    background: var(--normal-color);
+    color: var(--primary-color);
+    padding: 24px 0;
+    text-align: center;
+}
+.wrapper-img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.wrapper-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .8;
+    transition: transform linear .2s;
+}
+.list-primary {
+    justify-content: space-evenly;
+}
+.list-primary li {
+    background: var(--normal-color);
+    border-radius: 4px;
+}
+.list-primary li:hover > a {
+    background: var(--primary-color);
+    color: var(--normal-color);
+}
+.list-primary li:hover > a img {
+    transform: scale(1.2);
+}
+.list-primary li a {
+    padding: 0;
+    color: var(--primary-color);
+}
+.item-content-wrapper {
+    margin-top: 16px;
+    padding: 12px 18px;
+}
+.item-content-wrapper .item-title {
+    text-align: center;
+    margin: 12px 0;
+}
+.item-content-wrapper .item-des {
+    text-align: center;
+    color: var(--des-color);
+}
+.list-primary li:hover .item-content-wrapper .item-des {
+    color: var(--normal-color);
+}
+.sub-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+    padding-top: 6px;
+    border-top: 1px solid var(--primary-color);
+}
+.sub-list li {
+    font-size: 14px;
+    background: var(--primary-color);
+    color: var(--normal-color);
+    margin: 0 6px;
+    padding: 4px 8px;
+    text-align: center;
+}
+.list-primary li:hover .item-content-wrapper .sub-list li {
+    background: var(--normal-color);
+    color: var(--primary-color);
+}
+.list-primary li:hover .item-content-wrapper .sub-list {
+    border-top: 1px solid var(--normal-color);
+}
