@@ -5,6 +5,9 @@
     padding: 4px 12px;
     background: var(--normal-color);
     box-shadow: var(--main-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 .nav-logo {
     width: 70px;
@@ -25,6 +28,9 @@
     bottom: 10px;
     font-size: 18px;
     color: var(--primary-color);
+}
+.menu-icon {
+    display: none;
 }
 ul.menu {
     display: flex;
@@ -83,4 +89,70 @@ ul.footer-list li a {
 .footer-des {
     margin: 8px 0;
     color: var(--des-color);
+}
+
+/* *Responsive */
+/* TODO: phần menu thu gọn */
+@media screen and (max-width: 460px) {
+    .navbar {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .nav-logo {
+        margin-left: 8px;
+    }
+    .nav-menu {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        position: relative;
+        width: 40%;
+        background: var(--normal-color);
+    }
+    .menu-icon {
+        display: block;
+        text-align: right;
+        z-index: 100;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        padding: 5px;
+        border-radius: 4px;
+    }
+    .menu-icon:hover {
+        background: var(--primary-color);
+    }
+    .menu-icon i {
+        font-size: 32px;
+        color: var(--primary-color);
+        cursor: pointer;
+    }
+    .menu-icon:hover i {
+        color: var(--normal-color);
+    }
+    ul.menu {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 100;
+        background: var(--normal-color);
+        padding: 40px 8px;
+        transition: transform .2s linear;
+        transform: translateX(150px);
+        border-radius: 2px;
+    }
+    ul.menu li {
+        margin: 8px 0;
+    }
+    ul.menu li a {
+        font-size: 24px;
+    }
+}
+
+/* *các class hỗ trợ - chỉ dành cho partials*/
+.menu-header-display {
+    transform: translateX(0) !important;
 }
