@@ -164,4 +164,7 @@ body {
         margin-bottom: 24px;
         width: 80%;
     }
+    ul.list-primary li .item-title {
+        font-size: 24px;
+    }
 }
