@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>CSS - Form</title>
+    <link rel="stylesheet" href="../../css/ct188/chuong3.css">
+</head>
+<body>
+    <main class="main">
+        <article class="container">
+            <section class="auth auth-login d-none">
+                <section class="auth-left">
+                    <section class="wrapper-img">
+                        <img src="https://static.vecteezy.com/system/resources/previews/004/607/791/non_2x/man-face-emotive-icon-smiling-male-character-in-blue-shirt-flat-illustration-isolated-on-white-happy-human-psychological-portrait-positive-emotions-user-avatar-for-app-web-design-vector.jpg" alt="">
+                    </section>
+                    <h3 class="title">Hello!</h3>
+                </section>
+                <section class="auth-right">
+                    <h3 class="title">Login</h3>
+                    <section class="wrapper-input">
+                        <label for="name" class="input-des">Name</label>
+                        <input id="name" type="text">
+                    </section>
+                    <section class="wrapper-input">
+                        <label for="password" class="input-des">Password</label>
+                        <input id="password" type="text">
+                    </section>
+                    <button class="form-btn submit-btn">Submit</button>
+                    <section class="more-option">
+                        <section class="social">
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-instagram"></i>
+                        </section>
+                        <span class="change-form-btn login">Register</span>
+                    </section>
+                </section>
+            </section>
+
+            <!-- author register -->
+            <section class="auth auth-register">
+                <section class="auth-left">
+                    <section class="wrapper-img">
+                        <img src="https://static.vecteezy.com/system/resources/previews/004/607/791/non_2x/man-face-emotive-icon-smiling-male-character-in-blue-shirt-flat-illustration-isolated-on-white-happy-human-psychological-portrait-positive-emotions-user-avatar-for-app-web-design-vector.jpg" alt="">
+                    </section>
+                    <h3 class="title">Hello!</h3>
+                </section>
+                <section class="auth-right">
+                    <h3 class="title">Register</h3>
+                    <section class="wrapper-input">
+                        <label for="name-register" class="input-des">Name</label>
+                        <input id="name-register" type="text">
+                    </section>
+                    <section class="wrapper-input">
+                        <label for="password-register" class="input-des">Password</label>
+                        <input id="password-register" type="text">
+                    </section>
+                    <section class="wrapper-input">
+                        <label for="re-password-register" class="input-des">Re-Password</label>
+                        <input id="re-password-register" type="text">
+                    </section>
+                    <button class="form-btn primary-btn">Register</button>
+                    <section class="more-option">
+                        <section class="social">
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-instagram"></i>
+                        </section>
+                        <span class="change-form-btn register">Login</span>
+                    </section>
+                </section>
+            </section>
+        </article>
+    </main>
+
+    <script>
+        //khai báo các modal của form
+        const loginChange = document.querySelector(".change-form-btn.login");
+        const registerChange = document.querySelector(".change-form-btn.register");
+        const authLogin = document.querySelector('.auth.auth-login');
+        const authRegister = document.querySelector('.auth.auth-register');
+        //khai báo nodeList cho các input
+        const inputList = document.querySelectorAll('.auth-right input');
+
+        //hàm giúp chuyển đổi nhanh giữa các modal
+        function changeDisplay(hiddenElement, showElement) {
+            hiddenElement.classList.add('d-none');
+            showElement.classList.remove('d-none');
+        }
+        loginChange.onclick = function(e) {
+            changeDisplay(authLogin, authRegister);
+        }
+        registerChange.onclick = function(e) {
+            changeDisplay(authRegister, authLogin);
+        }
+
+        //kiểm tra nội dung phần tử để chỉnh sửa UI cho phù hợp
+        inputList.forEach(input => {
+            input.addEventListener('focusout', function(e) {
+                const parentInput = input.parentElement;
+                const inputDes = parentInput.querySelector('.input-des');
+                if(input.value != '') inputDes.classList.add('input-des-forward');
+                else inputDes.classList.remove('input-des-forward')
+            })
+        })
+    </script>
+</body>
+</html>

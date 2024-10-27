@@ -106,6 +106,7 @@ body {
     padding: 12px 18px;
 }
 .item-content-wrapper .item-title {
+    font-size: 28px;
     text-align: center;
     margin: 12px 0;
 }
