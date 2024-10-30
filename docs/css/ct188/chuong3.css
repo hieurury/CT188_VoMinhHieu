@@ -11,15 +11,10 @@
             --bg-primary-btn: rgb(45, 103, 238);
         }
         .main {
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(45deg, #373B44, #4286f4);
+            margin: 30px;
         }
         .auth {
             display: flex;
@@ -38,7 +33,7 @@
             margin-right: 30px;
             flex-direction: column;
         }
-        .wrapper-img {
+        .auth-left .wrapper-img {
             width: 200px;
             height: 200px;
             border-radius: 50%;

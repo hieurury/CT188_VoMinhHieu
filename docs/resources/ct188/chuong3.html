@@ -4,10 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>CSS - Form</title>
     <link rel="stylesheet" href="../../css/ct188/chuong3.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <title>CSS - Form</title>
 </head>
 <body>
+    <head>
+        <nav class="navbar">
+            <div class="nav-logo">
+                <img src="../../img/shin-desktop.jpg" alt="">
+                <span class="nav-name">hieurury</span>
+            </div>
+            <div class="nav-menu">
+                <div class="menu-icon">
+                    <i class="bi bi-list"></i>
+                </div>
+                <ul class="menu">
+                    <li>
+                        <a href="">Giới thiệu</a>
+                    </li>
+                    <li>
+                        <a href="">Bài tập</a>
+                    </li>
+                    <li>
+                        <a href="">Sản phẩm</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </head>
     <main class="main">
         <article class="container">
             <section class="auth auth-login d-none">
@@ -72,37 +97,58 @@
             </section>
         </article>
     </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-wrapper">
+                <h3 class="footer-title">hieurury</h3>
+                <p class="footer-des">
+                    fullName: Võ Minh Hiếu <br>
+                    ID: B2303811 <br>
+                    Major: Software engineer <br>
+                    Collage: CTU - Can Tho University <br>
+                    Address: Long hoa - Binh Thuy - Can Tho
+                </p>
+            </div>
+            <div class="footer-wrapper">
+                <h3 class="footer-title">Kết nối</h3>
+                <ul class="footer-list">
+                    <li>
+                        <a href="">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="">Tiktok</a>
+                    </li>
+                    <li>
+                        <a href="">Github</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-wrapper">
+                <h3 class="footer-title">Sản phẩm</h3>
+                <ul class="footer-list">
+                    <li>
+                        <a href="https://hieurury.github.io/rury_comics">Wordle_Rury</a>
+                    </li>
+                    <li>
+                        <a href="https://hieurury.github.io/Wordle_Rury">Rury_Comics</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-wrapper">
+                <h3 class="footer-title">Slogan</h3>
+                <p class="footer-des">
+                    1. Yêu tổ quốc yêu đồng bào. <br>
+                    2. Học tập tốt, lao động tốt. <br>
+                    3. Đoàn kết tốt, kỉ luật tốt. <br>
+                    4. Giữ gìn vệ sinh thật tốt. <br>
+                    5. Khiêm tốn, thật thà, dũng cảm. <br>
+                </p>
+            </div>
+        </div>
+    </footer>
 
-    <script>
-        //khai báo các modal của form
-        const loginChange = document.querySelector(".change-form-btn.login");
-        const registerChange = document.querySelector(".change-form-btn.register");
-        const authLogin = document.querySelector('.auth.auth-login');
-        const authRegister = document.querySelector('.auth.auth-register');
-        //khai báo nodeList cho các input
-        const inputList = document.querySelectorAll('.auth-right input');
-
-        //hàm giúp chuyển đổi nhanh giữa các modal
-        function changeDisplay(hiddenElement, showElement) {
-            hiddenElement.classList.add('d-none');
-            showElement.classList.remove('d-none');
-        }
-        loginChange.onclick = function(e) {
-            changeDisplay(authLogin, authRegister);
-        }
-        registerChange.onclick = function(e) {
-            changeDisplay(authRegister, authLogin);
-        }
-
-        //kiểm tra nội dung phần tử để chỉnh sửa UI cho phù hợp
-        inputList.forEach(input => {
-            input.addEventListener('focusout', function(e) {
-                const parentInput = input.parentElement;
-                const inputDes = parentInput.querySelector('.input-des');
-                if(input.value != '') inputDes.classList.add('input-des-forward');
-                else inputDes.classList.remove('input-des-forward')
-            })
-        })
-    </script>
+    <!-- *javascripts -->
+    <script src="../../js/partials.js"></script>
+    <script src="../../js/ct188/chuong3.js"></script>
 </body>
 </html>
